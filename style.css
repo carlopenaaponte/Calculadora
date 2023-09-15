@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  background-color: rgb(6, 3, 35);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* display: grid;
+    place-items: center; */
+}
+
+.calculadora {
+  background-color: rgb(21, 17, 65);
+  color: white;
+  width: 350px;
+  max-width: 100%;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+.pantalla {
+  background-color: rgb(6, 3, 35);
+  grid-column: 1 / 5;
+  /* grid-column: 1 / -1; */
+  text-align: right;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  font-size: 2rem;
+  font-family: monospace;
+  font-weight: 600;
+  /* overflow-x: auto;  Evita que el contenedor se desborde cuando coloquemos muchos numeros  */
+  word-wrap: break-word; /* Si escribimos muchos numeros se va colocando abajo*/
+}
+.btn {
+  background-color: rgb(21, 17, 65);
+  color: white;
+  border: 0;
+  padding: 1.5rem 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+.btn:hover {
+  background-color: rgb(6, 3, 35);
+  cursor: pointer;
+}
+#cero {
+  grid-column: span 2;
+}
+#igual {
+  grid-row: span 2;
+  background-color: rgb(159, 32, 32);
+}
+#igual:hover {
+  background-color: rgb(183, 42, 42);
+}
